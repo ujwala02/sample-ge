@@ -4,9 +4,9 @@ pipeline {
     DOCKERHUB_CREDENTIALS = credentials('docker-hub')
     }
     stages { 
-        stage('SCM Checkout') {
+        stage('git Checkout') {
             steps{
-            git 'https://github.com/ujwala02/sample-ge.git'
+            git credentialsId: 'GIT_HUB_CREDENTIALS', url: 'https://github.com/ujwala02/sample-ge.git'
             }
         }
 
