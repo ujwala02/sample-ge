@@ -17,3 +17,5 @@ COPY ./ge/app /ge/app
 COPY my-entry.sh /ge/
 
 CMD ["/ge/my-entry.sh"]
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
